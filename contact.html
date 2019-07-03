@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en-US">
+<html class="h-100" lang="en-US">
 
 <head>
 	<meta charset="utf-8">
@@ -16,7 +16,9 @@
 	<link rel="stylesheet" href="/css/custom.css">
 
 	<!-- FONT AWESOME -->
+	<script type="text/javascript" async="" defer="" src="//shebuildswithcode.com/follow/matomo.js"></script>
 	<script src="https://kit.fontawesome.com/7a5f159d5d.js"></script>
+	<link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all">
 
 
 	<!-- MATOMO TRACKING -->
@@ -33,10 +35,9 @@
 			g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
 		})();
 	</script>
-
 </head>
 
-<body>
+<body class="d-flex flex-column h-100">
 	<!--[if lte IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
 	<![endif]-->
@@ -61,17 +62,20 @@
 			<p class="lead">Got a question? Suggestion? Just want to say hi? Cool! Fill out the form below.</p>
 		</div>
 	</header>
-	<main>
+	<main class="flex-grow-1">
 		<div class="container">
 			<div class="form-group">
-				<form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/noelle@shebuildswithcode.com" method="post">
-					<fieldset id="fs-frm-inputs">	
+				<form id="fs-frm" name="simple-contact-form" accept-charset="utf-8"
+					action="https://formspree.io/noelle@shebuildswithcode.com" method="post">
+					<fieldset id="fs-frm-inputs">
 						<label for="first-name">First Name</label>
-						<input type="text" class="form-control" name="name" id="first-name" placeholder="First Name" required>
+						<input type="text" class="form-control" name="name" id="first-name" placeholder="First Name" required="">
 						<label for="email-address">Email address</label>
-						<input type="email" class="form-control" id="email-address" name="_replyto" placeholder="name@example.com" required>
+						<input type="email" class="form-control" id="email-address" name="_replyto" placeholder="name@example.com"
+							required="">
 						<label for="message">Message</label>
-						<textarea class="form-control" name="message" id="message" placeholder="What's on your mind?" required></textarea>
+						<textarea class="form-control" name="message" id="message" placeholder="What's on your mind?"
+							required=""></textarea>
 						<input type="hidden" name="_subject" id="email-subject" value="New Email!">
 					</fieldset>
 					<input type="submit" class="btn btn-success my-2" value="Send Message" id="contact-button">
@@ -80,9 +84,9 @@
 		</div>
 	</main>
 
-	<footer class="footer mt-auto py-4 bg-dark">
+	<footer class="footer bg-dark mt-auto py-3">
 		<div class="container">
-			<p class="m-0 text-center text-white">Copyright &copy; <a href="/">She Builds With Code</a> 2019</p>
+			<p class="m-0 text-center text-white">Copyright © <a href="/">She Builds With Code</a> 2019</p>
 			<p class="text-center"><a href="https://www.freeprivacypolicy.com/privacy/view/2efd88d8b85b89da25a70509232a12e3"
 					target="_blank">Privacy Policy</a></p>
 		</div>
@@ -97,6 +101,8 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
 		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
 		crossorigin="anonymous"></script>
+
+
 
 </body>
 
