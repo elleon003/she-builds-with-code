@@ -48,74 +48,74 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 			<div class="navbar-nav">
-				<a class="nav-item nav-link" href="/">Home</a>
+				<a class="nav-item nav-link" href="/">Home</span></a>
 				<a class="nav-item nav-link" href="../about.html">About</a>
 				<a class="nav-item nav-link" href="../contact.html">Contact Me</a>
 			</div>
 		</div>
 	</nav>
+
 	<header>
 		<div class="jumbotron">
-			<h1 class="display-4">The MVP of this site (Minimum Viable Product)</h1>
-			<p class="lead">Where it all starts</p>
-				<em><small>July 2, 2019</small></em>
+			<h1 class="display-4">Damnit, just stick footer!</h1>
+			<p class="lead mb-0">Determined to get a grip on a sticky footer. Also, I'm joining the #100DaysOfCode challenge!
+			</p>
+			<em><small>July 5, 2019</small></em>
 		</div>
 	</header>
+
 	<main class="flex-grow-1">
 		<div class="container pb-4">
 			<article>
-				<p><em>If you haven't yet, I recommend reading the <a href="../about.html">About page</a> of this site, just so
-						you know what you're getting into!</em></p>
-				<p>For day one of my “build as you learn” site, I’m going with the most minimum site I can build – a few HTML
-					pages, styled with a little CSS (mainly Bootstrap).</p>
-				<p>For the most part, I’m going to build everything, but I’m going to use some frameworks as I go. But since I
-					need to learn those frameworks, and the goal here is to make constant progress now that I’ve started, I’m
-					starting very small.</p>
-				<p>That said, I am not a designer. I have no desire to be a designer. My goals in code are geared more toward
-					Backend development, so I’m using Bootstrap for styles instead of trying to build all my CSS from the ground
-					up.</p>
-				<p>Initially, this will be a static site – I’ll be manually updating all new posts on the home page. Obviously
-					this is going to get old VERY quickly, so the next version of this site (and the subject of the next series of
-					my posts) will be dedicated to learning a Python based site generator named <a
-						href="https://blog.getpelican.com/" target="_blank">Pelican</a> to eliminate this pain in the ass.</p>
-				<p>That said, I'm extremely excited to have gotten this far. Building the home page, this post, the about page,
-					and the contact page has taken me all day (at least around 8 hours), but I'm thrilled to see my work.</p>
-				<p>So all that I accomplished on this first day:</p>
-				<ul>
-					<li>Purchased and setup the domain <a href="https://shebuildswithcode.com/">She Builds With Code.com</a></li>
-					<li>Downloaded my personal html boilerplate code from my <a
-							href="https://github.com/elleon003/my-html-boilerplate" target="_blank">GitHub repo</a>.</li>
-					<li>Wrote my about page and this post</li>
+				<p>After uploading the site yesterday, I made sure to click around the site live. For one, I was really proud
+					that I got it up and wanted to bask in it a little bit. And secondly, I wanted to check all my links. Sure
+					enough, I had one link that was incomplete, an internal link that had a typo, and a outgoing link that didn’t
+					open in a new tab. </p>
+				<p>Once that was all fixed, I took a look at it on my phone. And…………</p>
+				<img style="max-height:40rem;" class="img-fluid d-block mx-auto" src="/img/non-sticky-footer.jpg"
+					alt="Screenshot of floating footer on mobile">
+				<p>DAMMIT!!</p>
+				<p>In previous projects, I have struggled with getting my footer to stick to the bottom of the
+					window. But each time I’ve fixed it, I’ve just copied and pasted code I’ve found. I honestly didn’t understand
+					how it worked.</p>
+				<p>This time, I was determined to make it make sense. </p>
+				<p>Here are the key parts of my HTML:</p>
+				<pre class="pre-scrollable bg-secondary">
+					<code>
+&lt;html class="h-100" lang="en-US"&gt;
+........
+&lt;body class="d-flex flex-column h-100"&gt;
+	&lt;nav class="navbar navbar-expand-lg navbar-light bg-primary"&gt;
+		Nav stuff here
+	&lt;/nav&gt;
+
+	&lt;main class="flex-shrink-0"&gt;
+		&lt;div class="container"&gt;
+		&lt;/div&gt;
+	&lt;/main&gt;
+
+	&lt;footer class="footer mt-auto py-2 bg-dark"&gt;
+		Footer content
+	&lt;/footer&gt;
+					</code>
+				</pre>
+				<p>Full disclosure - I took this code directly from the Sticky Footer example provided by Bootstrap. But after I applied it, I played around in the Developer tools on Firefox turning styles off and on. I also missed applying a class to an item, and once I discovered that mistake, I felt I had a tiny better grip on how it all worked.</p>
+				<p>These classes applied to the body: <code>&lt;body class="d-flex flex-column h-100"&gt;</code>
 					<ul>
-						<li><em>It was really important to me to write before I got too tired, so it came before I dove into
-								code.</em></li>
+						<li><em>d-flex</em> applies flexbox display on the body element.</li>
+						<li><em>flex-column</em> changes the direction of all child elements to stack vertically, instead of the default row view of flexbox.</li>
+						<li>and <em>h-100</em> makes the body's height take up 100% of the available space, set by the parent element</li>
 					</ul>
-					<li>Created and integrated my signup forms for MailChimp</li>
-					<ul>
-						<li><em><strong>Don't forget to <a href="#mc_embed_signup">sign up</a> for updates!</strong></em></li>
-					</ul>
-					<li>Created my <a href="../contact.html">Contact page</a>, using a service called <a
-							href="https://formspree.io/" target="_blank">Formspree.</a></li>
-					<li>Installed <a href="https://matomo.org/" target="_blank">Matomo Web Analytics</a> (open source web
-						analytics)</li>
-					<li>Uploaded the site to a <a href="https://github.com/elleon003/she-builds-with-code/" target="_blank">GitHub
-							repo</a></li>
-					<li>Used cPanel's Git integration to upload my site to my <a href="http://www.a2hosting.com?aid=5b02ff493a6f4"
-							target="_blank">A2 Hosting</a> account.</li>
-				</ul>
-				<p>Not a ton of coding today, not surprising considering the setup needed to get started.The cool thing is after
-					typing my own HTML today, I have finally remembered what the HTML snippet is to open a link in a new tab.
-					<em>It's <code>target="_blank"</code></em></p>
-				<img style="max-height:40rem;" class="img-fluid d-block mx-auto" src="/img/snoopy-dance-woohoo-meme.jpg" alt="Snoopy Dance">
-				<p>In addition to learning Pelican, I'll also be looking at adding comment functionality. Initially, I thought
-					about using a 3rd party program like Disqus, but this site is going to go through so many changes as I learn.
-					I didn't like the idea of not owning the content on my site - I'd run the risk of losing all of it if I
-					decided to switch after things had gotten started!</p>
-				<p>Thanks for sticking around. I'm excited to see where we go from here.</p>
+				</p>
+				<p>As the parent element, this: <code>&lt;html class="h-100" lang="en-US"&gt;</code> was also applied to make sure that the page was displaying on 100% of the available view.</p>
+				<p>This: <code>&lt;main class="flex-shrink-0"&gt;</code> ...I'll be dead honest - I'm not completely clear on this. I know that by default, flex will grow and shrink elements in a container evenly by default. Telling it to shrink by 0 means the main content will not shrink in height (height instead of width because the parent container is displaying everything in columns.) And as the part of code I initially forgot, I know it's key to pushing the footer to the bottom of the screen.</p>
+				<p>So yeah....I've got a better grip, but not good enough to fully explain it. CSS is going to be a challenge for me in this project.</p>
+				<p>To wrap this post up, I’ve decided to start the <a href="https://www.100daysofcode.com/" target="_blank">#100DaysofCode</a> challenge using this site. I’ve tried before, but quit early because I had no clear direction for how I spent my time coding, no end project in mind. This time, I’ve got clear mile-markers for this site, with a ton of stuff to learn along the way. Follow me on Twitter <a href="https://twitter.com/SheBuildsWCode" target="_blank">@SheBuildsWCode</a> or sign up for email updates below!</p>
 			</article>
 		</div>
 	</main>
 
+	<!-- MAILCHIMP SIGNUP FORM -->
 	<aside class="mx-auto my-3">
 		<h4 class="text-center">Keep up with the progress! Sign up for updates below.</h4>
 		<!-- Begin Mailchimp Signup Form -->
@@ -148,7 +148,7 @@
 		<!--End mc_embed_signup-->
 	</aside>
 
-	<footer class="footer mt-auto py-4 bg-dark">
+	<footer class="footer mt-auto py-2 bg-dark">
 		<div class="container">
 			<p class="m-0 text-center text-white">Copyright &copy; <a href="/">She Builds With Code</a> 2019</p>
 			<p class="text-center"><a href="https://www.freeprivacypolicy.com/privacy/view/2efd88d8b85b89da25a70509232a12e3"

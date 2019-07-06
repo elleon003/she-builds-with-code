@@ -18,3 +18,18 @@ label {
     margin-top:0.5rem;
 }
 
+fieldset {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* HOME PAGE */
+.blog-blurb {
+    width: 18rem;
+    height: 36rem;
+}
+
+/* CONTACT */
+#message {
+    height:12rem;
+}
