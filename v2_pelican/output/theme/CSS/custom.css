@@ -1,3 +1,7 @@
+@import url("bootstrap.min.css");
+@import url("style-404.css");
+
+
 /* NAVIGATION */
 .navbar-brand {
     font-size: 1.55em;

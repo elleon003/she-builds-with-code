@@ -8,6 +8,8 @@ SITEURL = ''
 
 PATH = 'content'
 
+
+
 TIMEZONE = 'America/New_York'
 
 DEFAULT_LANG = 'en'
@@ -32,7 +34,7 @@ SOCIAL = (('You can add links in your config file', '#'),
 DEFAULT_PAGINATION = 9
 
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+RELATIVE_URLS = True
 
 # Custom paths and URLS for posts, pages & images
 ARTICLE_PATHS = ['blog']
@@ -41,12 +43,22 @@ ARTICLE_SAVE_AS = 'blog/{slug}.html'
 STATIC_PATHS = ['images']
 PAGE_PATHS = ['pages']
 
+# Deactivating Cache for development
+LOAD_CONTENT_CACHE = False
+
+# Menu options
+DISPLAY_PAGES_ON_MENU = True
+DISPLAY_CATEGORIES_ON_MENU = False
 
 # Other custom settings
 
 # Switch what is commented out when testing theme
-# THEME = themes/shebuildswithcodetheme
-THEME = "simple"
+THEME = "/home/noelle/Dropbox/Linux/Websites/she-builds-with-code/v2_pelican/content/theme/shebuildswithcodetheme"
+CSS_FILE = 'custom.css'
+# THEME = "notmyidea"
+# THEME = "simple"
 USE_FOLDER_AS_CATEGORY = False
 DEFAULT_CATEGORY = 'Web Development'
 
+# PAY ATTENTION TO THIS SETTING BEFORE GOING LIVE
+DELETE_OUTPUT_DIRECTORY = True
