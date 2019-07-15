@@ -1,4 +1,4 @@
-# she-builds-with-code
+# She Builds with Code
 
 ## About this repo
 This is the home of my personal blog project, [She Builds With Code](https://shebuildswithcode.com). On the blog, I discuss everything I've learned while learning to code. I decided the site itself would also be a bit of a showcase of what I'm learning as I'm going. 
