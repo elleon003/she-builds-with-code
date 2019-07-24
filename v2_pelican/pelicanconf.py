@@ -42,6 +42,12 @@ ARTICLE_URL = 'blog/{slug}.html'
 ARTICLE_SAVE_AS = 'blog/{slug}.html'
 STATIC_PATHS = ['images']
 PAGE_PATHS = ['pages']
+PAGE_URL = '{slug}'
+PAGE_SAVE_AS = '{slug}.html'
+
+
+# Summary limits for articles and pages
+SUMMARY_MAX_LENGTH = 30
 
 # Deactivating Cache for development
 LOAD_CONTENT_CACHE = False

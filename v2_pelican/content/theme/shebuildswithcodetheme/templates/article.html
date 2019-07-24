@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block html_lang %}{{ article.lang }}{% endblock %}
 
-{% block title %}{{ SITENAME }} - {{ article.title }}{% endblock %}
+{% block title %}{{ SITENAME }} - {{ article.title }}{% endblock title %}
 
 {% block head %}
   {{ super() }}
@@ -57,15 +57,6 @@
     </address>
     {% endif %} #}
 
-    {% if article.tags %}
-    <div class="tags">
-        Tags:
-        {% for tag in article.tags %}
-            <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
-        {% endfor %}
-    </div>
-    {% endif %}
-  </footer><!-- /.post-info -->
   <div class="entry-content">
     <div class="container pb-4">
     {{ article.content }}
@@ -75,6 +66,47 @@
         {# TO COPY FOR IMAGE USE #}
         {# <img style="max-height:40rem;" class="img-fluid d-block mx-auto mb-3" src="{static}/images/NAME_OF_IMAGE" alt=""> #}
       </div>
+    {% endif %}
+    {% if article.tags %}
+    <div class="tags">
+        Tags:
+        {% for tag in article.tags %}
+            <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
+        {% endfor %}
+    </div>
+    {% endif %}
   </div><!-- /.entry-content -->
 </section>
-{% endblock %}
+<aside class="mx-auto my-3">
+	<h4 class="text-center">Keep up with the progress! Sign up for updates below.</h4>
+	<!-- Begin Mailchimp Signup Form -->
+  <div id="mc_embed_signup">
+    <form class="form-inline d-flex justify-content-center" action="https://shebuildswithcode.us10.list-manage.com/subscribe/post?u=dd5d34af47663b2b09922e544&amp;id=57d68f5c5b"method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
+      novalidate>
+      <div class="form-row id=" mc_embed_signup_scroll">
+        <label class="sr-only" for="mce-FNAME">Name</label>
+        <input type="text" class="form-control mb-2 mr-sm-2" id="mce-FNAME" value="" name="FNAME"
+          placeholder="First Name">
+        <label class="sr-only" for="mce-EMAIL">Email</label>
+        <input type="email" class="form-control mb-2 mr-sm-2 required email" id="mce-EMAIL" name="EMAIL"
+          placeholder="Email">
+      </div>
+      <div id="mce-responses" class="clear">
+        <div class="response" id="mce-error-response" style="display:none"></div>
+        <div class="response" id="mce-success-response" style="display:none"></div>
+      </div>
+      <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+      <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+          name="b_dd5d34af47663b2b09922e544_57d68f5c5b" tabindex="-1" value=""></div>
+      <div class="clear">
+        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
+          class="btn btn-success mb-2">
+      </div>
+    </form>
+  </div>
+  <!--End mc_embed_signup-->
+</aside>
+{% endblock content %}
+
+
+

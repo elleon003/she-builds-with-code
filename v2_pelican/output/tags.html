@@ -1,32 +1,19 @@
 <!DOCTYPE html>
-<html class="h-100" lang="{% block html_lang %}{{ DEFAULT_LANG }}{% endblock html_lang %}">
+<html class="h-100" lang="en">
 
 <head>
-  {% block head %}
-    <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
+    <title>She Builds With Code - Tags</title>
     
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content="The online experiment of a web developer in training. Learning to code and sharing all the mistakes!">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- ALL CSS (Edit in settings) -->
-    <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/CSS/{{ CSS_FILE }}" />
+    <link rel="stylesheet" href="./theme/CSS/custom.css" />
 
 	  <!-- FONT AWESOME -->
 	  <script src="https://kit.fontawesome.com/7a5f159d5d.js"></script>
 
-    {% if FEED_ALL_ATOM %}
-      <link href="{{ FEED_DOMAIN }}/{% if FEED_ALL_ATOM_URL %}{{ FEED_ALL_ATOM_URL }}{% else %}{{ FEED_ALL_ATOM }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
-    {% endif %}
-    {% if FEED_ALL_RSS %}
-      <link href="{{ FEED_DOMAIN }}/{% if FEED_ALL_RSS_URL %}{{ FEED_ALL_RSS_URL }}{% else %}{{ FEED_ALL_RSS }}{% endif %}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Full RSS Feed" />
-    {% endif %}
-    {% if FEED_ATOM %}
-      <link href="{{ FEED_DOMAIN }}/{%if FEED_ATOM_URL %}{{ FEED_ATOM_URL }}{% else %}{{ FEED_ATOM }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed" />
-    {% endif %}
-    {% if FEED_RSS %}
-      <link href="{{ FEED_DOMAIN }}/{% if FEED_RSS_URL %}{{ FEED_RSS_URL }}{% else %}{{ FEED_RSS }}{% endif %}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
-    {% endif %}
 
 
     <!-- MATOMO TRACKING -->
@@ -43,7 +30,6 @@
         g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
       })();
     </script>
-  {% endblock head %}
 </head>
 
 <body id="index" class="home d-flex flex-column h-100">
@@ -54,25 +40,24 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        {# {% for title, link in MENUITEMS %}
-            <a class="" href="{{ link }}">{{ title }}</a>
-        {% endfor %} #}
-        {% if DISPLAY_PAGES_ON_MENU %}
-          {% for p in pages %}
-            <a {% if p == page %} class="active"{% endif %} class="nav-item nav-link" href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a>
-          {% endfor %}
-        {% endif %}
+            <a  class="nav-item nav-link" href="./about-me">About Me</a>
+            <a  class="nav-item nav-link" href="./contact">Contact</a>
       </div>
     </div>
   </nav><!-- /#menu -->
 
 
-  {% block content %}
-  {% endblock content %}
+    <h1>Tags for She Builds With Code</h1>
+    <ul>
+        <li><a href="./tag/intro.html">Intro</a> (1)</li>
+        <li><a href="./tag/more-testing.html">More Testing</a> (1)</li>
+        <li><a href="./tag/outro.html">Outro</a> (1)</li>
+        <li><a href="./tag/testing.html">Testing</a> (1)</li>
+    </ul>
 
   <footer id="contentinfo" class="body footer mt-auto py-2 bg-dark">
     <div class="container">
-			<p class="m-0 text-center text-white">Copyright &copy; <a href="{{ SITEURL }}">{{ SITENAME }}</a> 2019</p>
+			<p class="m-0 text-center text-white">Copyright &copy; <a href=".">She Builds With Code</a> 2019</p>
 			<p class="text-center"><a href="https://www.freeprivacypolicy.com/privacy/view/2efd88d8b85b89da25a70509232a12e3" target="_blank">Privacy Policy</a></p>
 		</div>
   </footer><!-- /#contentinfo -->
