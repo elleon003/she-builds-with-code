@@ -57,9 +57,10 @@
         {# {% for title, link in MENUITEMS %}
             <a class="" href="{{ link }}">{{ title }}</a>
         {% endfor %} #}
+        <a class="nav-item nav-link" href="{{ SITEURL }}">Home</a>
         {% if DISPLAY_PAGES_ON_MENU %}
           {% for p in pages %}
-            <a {% if p == page %} class="active"{% endif %} class="nav-item nav-link" href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a>
+            <a class="nav-item nav-link" href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a>
           {% endfor %}
         {% endif %}
       </div>

@@ -29,7 +29,7 @@
       <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
         title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h1>
       <p class="lead mb-0">{{ article.intro|striptags }}</p>
-      <em><small class="post-info mt-n2"><time class="published" datetime="{{ article.date.isoformat() }}">
+      <em><small class="post-info mt-n2"><time class="published" datetime="{{ article.date }}">
       {{ article.locale_date }}
       </time></small></em>
       {% if article.modified %}

@@ -8,11 +8,10 @@ SITEURL = ''
 
 PATH = 'content'
 
-
-
 TIMEZONE = 'America/New_York'
 
 DEFAULT_LANG = 'en'
+DEFAULT_DATE_FORMAT = '%B %d, %Y'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -40,11 +39,10 @@ RELATIVE_URLS = True
 ARTICLE_PATHS = ['blog']
 ARTICLE_URL = 'blog/{slug}.html'
 ARTICLE_SAVE_AS = 'blog/{slug}.html'
-STATIC_PATHS = ['images']
-PAGE_PATHS = ['pages']
+PAGE_PATHS = ['pages', 'static-pages']
+STATIC_PATHS = ['images', 'static-pages']
 PAGE_URL = '{slug}'
 PAGE_SAVE_AS = '{slug}.html'
-
 
 # Summary limits for articles and pages
 SUMMARY_MAX_LENGTH = 30
